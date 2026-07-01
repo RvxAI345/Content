@@ -22,7 +22,7 @@ export function HeroSection() {
           loop
           className="w-full h-full object-cover"
         >
-          <source src="/videos/hero.mp4" type="video/mp4" />
+          <source src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/HeroSection-WxWKjocPcv16MIyNKOKXmYOTx3xJdX.mp4" type="video/mp4" />
         </video>
         <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/20 to-black/60" />
       </div>
