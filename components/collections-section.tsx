@@ -26,19 +26,19 @@ export function CollectionsSection() {
 
   const collections = [
     {
-      title: 'Timeless Elegance',
-      description: 'Classic designs that transcend seasons',
-      color: 'from-gold/20 to-dark-secondary',
-    },
-    {
-      title: 'Contemporary Luxury',
-      description: 'Modern aesthetics meets artisanal craft',
-      color: 'from-dark-secondary to-gold/10',
-    },
-    {
       title: 'Heritage Icons',
       description: 'Signature pieces from our archive',
-      color: 'from-gold/20 to-dark-secondary',
+      image: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/cmt237_Cinematic_portrait_format_photograph_of_a_classic_dark_n_c2ec20f7-0f07-4aaf-96fe-7e936024f014-rPPoSPDnvJVWOTIBbufYcw0KL2agQQ.png',
+    },
+    {
+      title: 'Timeless Elegance',
+      description: 'Classic designs that transcend seasons',
+      image: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/cmt237_Cinematic_portrait_format_photograph_of_a_vintage_dark_B_9b51e40e-152d-496c-88a0-251ec6193a16-1nQLXD3U5ovHqEvqWB9i0yilnjEoNS.png',
+    },
+    {
+      title: 'Contemporary',
+      description: 'Modern aesthetics meets artisanal craft',
+      image: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/cmt237_Cinematic_portrait_format_shot_of_a_sleek_modern_black_l_d1b7215f-a4da-40b9-9dec-9f819ffbd76c-Za0k0INIh2QZjhO4814ydZYl98Mvm2.png',
     },
   ]
 
@@ -60,10 +60,18 @@ export function CollectionsSection() {
           {collections.map((collection, idx) => (
             <div
               key={idx}
-              className={`group relative h-80 rounded-lg overflow-hidden border border-gold/20 hover:border-gold/50 transition-all duration-500 cursor-pointer hover:shadow-lg hover:shadow-gold/20 ${idx === 1 ? 'md:translate-y-8' : ''}`}
+              className={`group relative h-96 rounded-lg overflow-hidden border border-gold/20 hover:border-gold/50 transition-all duration-500 cursor-pointer hover:shadow-lg hover:shadow-gold/20 ${idx === 1 ? 'md:translate-y-8' : ''}`}
             >
-              {/* Background Gradient */}
-              <div className={`absolute inset-0 bg-gradient-to-br ${collection.color}`} />
+              {/* Background Image */}
+              <div
+                className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110"
+                style={{
+                  backgroundImage: `url('${collection.image}')`,
+                }}
+              />
+
+              {/* Gradient Overlay */}
+              <div className="absolute inset-0 bg-gradient-to-t from-dark via-dark/40 to-transparent" />
 
               {/* Content */}
               <div className="absolute inset-0 flex flex-col justify-between p-6 md:p-8">
@@ -88,7 +96,7 @@ export function CollectionsSection() {
               </div>
 
               {/* Hover Overlay */}
-              <div className="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-colors duration-300" />
+              <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300" />
             </div>
           ))}
         </div>
