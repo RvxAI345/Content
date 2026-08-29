@@ -29,7 +29,7 @@ export function HeroSection() {
 
       {/* Header Navigation */}
       <header className={`absolute top-0 left-0 right-0 z-40 px-8 md:px-16 py-8 transition-opacity duration-1000 ${isLoaded ? 'opacity-100' : 'opacity-0'}`}>
-        <nav className="flex items-center justify-between max-w-7xl mx-auto w-full">
+        <nav className="flex items-center justify-between max-w-6xl mx-auto w-full">
           <div className="text-2xl font-bold tracking-widest text-gold">MIVO</div>
           <div className="hidden md:flex gap-12 text-cream text-sm tracking-wider">
             <a href="#about" className="hover:text-gold transition-colors duration-300">
